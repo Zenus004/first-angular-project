@@ -7,26 +7,26 @@ export const DUMMY_USERS =[
       {
         id: 'u2',
         name: 'Emily Thompson',
-        avatar: 'logo.png',
+        avatar: 'u6.jpeg',
       },
       {
         id: 'u3',
         name: 'Marcus Johnson',
-        avatar: 'logo.png',
+        avatar: 'u3.jpeg',
       },
       {
         id: 'u4',
         name: 'David Miller',
-        avatar: 'logo.png',
+        avatar: 'u4.jpeg',
       },
       {
         id: 'u5',
         name: 'Priya Patel',
-        avatar: 'logo.png',
+        avatar: 'u5.jpeg',
       },
       {
         id: 'u6',
         name: 'Arjun Singh',
-        avatar: 'logo.png',
+        avatar: 'u2.jpeg',
       }
 ];
