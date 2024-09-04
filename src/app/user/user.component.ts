@@ -2,6 +2,12 @@ import { Component, computed, EventEmitter, input, Input, output, Output, signal
 import { DUMMY_USERS } from '../../dummy-user';
 const random_Index = Math.floor(Math.random() * DUMMY_USERS.length);
 
+type User ={
+  id: string
+  name: string
+  avatar: string
+}
+
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -19,11 +25,13 @@ export class UserComponent {
   // name = input.required<string>();
   // avatar = input.required<string>();
 
-  @Input({required: true}) user !: {
-    id: string
-    name: string
-    avatar: string
-  }
+  // @Input({required: true}) user !: {
+  //   id: string
+  //   name: string
+  //   avatar: string
+  // }
+  
+  @Input({required: true}) user !: User
 
   // @Output() select = new EventEmitter<string>()
   select = output<string>()
