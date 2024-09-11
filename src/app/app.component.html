@@ -42,12 +42,12 @@
         </li> -->
     </ul>
 
-    @if(selectedUser){
-        <app-tasks [name]="selectedUser.name"/>
-    }@else{
+    <!-- @if(selectedUser){ -->
+        <app-tasks *ngIf="selectedUser" else fallback [name]="selectedUser.name"/>
+    <!-- }@else{ -->
         <p id="fallback">
           Select user to see their details.  
         </p>
-    }
+    <!-- } -->
     <!-- <app-tasks [name]="selectedUser ? selectedUser.name:''"/> -->
 </main>
