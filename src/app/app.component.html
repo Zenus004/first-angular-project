@@ -9,9 +9,7 @@
                 [avatar]="users[0].avatar"
                 (select)="onSelectUser($event)"/> -->
     
-                <app-user
-                [user]="user"
-                (select)="onSelectUser($event)"/>
+                <app-user [user]="user" (select)="onSelectUser($event)"/>
     
             </li>
         <!-- } -->
@@ -43,7 +41,8 @@
     </ul>
 
     <!-- @if(selectedUser){ -->
-        <app-tasks *ngIf="selectedUser" else fallback [name]="selectedUser.name"/>
+    <app-tasks *ngIf="selectedUserId" [userId]="selectedUserId" else fallback [userName]="selectedUser?.name ?? ''"></app-tasks>
+  
     <!-- }@else{ -->
         <p id="fallback">
           Select user to see their details.  

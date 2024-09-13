@@ -31,10 +31,13 @@ export class UserComponent {
   //   avatar: string
   // }
   
-  @Input({required: true}) user !: User
+  // @Input({required: true}) user !: User
+
+  @Input() user!: User;
+  @Output() select = new EventEmitter<string>();
 
   // @Output() select = new EventEmitter<string>()
-  select = output<string>()
+  // select = output<string>()
   onSelectUser() {
     console.log("The user click the button");
     // const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);

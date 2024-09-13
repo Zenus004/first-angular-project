@@ -1,12 +1,14 @@
 <section>
   <header>
-    <h2>{{ name() }}'s Tasks</h2>
+    <h2>{{ userName }}'s Tasks</h2>
     <menu>
       <button>Add Task</button>
     </menu>
   </header>
   <ul>
-        <li> create task </li>
-    
+    <li *ngFor="let task of userTasks">
+      <app-task [title]="task.title" [dueDate]="task.duedate" [summary]="task.summery"></app-task>
+    </li>
+    <li> create task </li>
   </ul>
 </section>
