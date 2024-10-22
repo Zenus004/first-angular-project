@@ -11,6 +11,9 @@ import { NgFor } from '@angular/common';
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
+  onCompleteTask(id: string) {
+    this.tasks = this.tasks.filter(task => task.taskid !== id); // taskid instead of id
+  }
   // name = input.required<string>();
   @Input() userId!: string;
   @Input() userName!: string;
