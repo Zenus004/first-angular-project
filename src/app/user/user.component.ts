@@ -31,12 +31,9 @@ export class UserComponent {
   //   avatar: string
   // }
   
-  // @Input({required: true}) user !: User
-
-  @Input() user!: User;
-  @Output() select = new EventEmitter<string>();
-
-  // @Output() select = new EventEmitter<string>()
+  @Input({required: true}) selected!: boolean;
+  @Input({required: true}) user !: User
+  @Output() select = new EventEmitter<string>()
   // select = output<string>()
   onSelectUser() {
     console.log("The user click the button");

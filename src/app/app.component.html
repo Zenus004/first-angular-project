@@ -9,7 +9,7 @@
                 [avatar]="users[0].avatar"
                 (select)="onSelectUser($event)"/> -->
     
-                <app-user [user]="user" (select)="onSelectUser($event)"/>
+                <app-user [selected]="selectedUserId==user.id" [user]="user" (select)="onSelectUser($event)"/>
     
             </li>
         <!-- } -->
