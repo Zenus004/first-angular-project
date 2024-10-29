@@ -6,7 +6,7 @@ import { NgFor } from '@angular/common';
 @Component({
   selector: 'app-tasks',
   standalone: true,
-  imports: [TaskComponent,NgFor],
+  imports: [TaskComponent, NgFor],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css'
 })

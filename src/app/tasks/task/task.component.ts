@@ -9,9 +9,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 
 export class TaskComponent {
-onCompleteTask() {
-  this.complete.emit();
-}
+  onCompleteTask() {
+    this.complete.emit();
+  }
   @Input() title!: string;
   @Input() dueDate!: string;
   @Input() summary!: string;
